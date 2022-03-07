@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blac_shade_1"
+    tools:context=".MainActivity">
+
+    <!--edit text for searching our currency-->
+    <EditText
+        android:id="@+id/idEdtCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:focusable="auto"
+        android:hint="Busque una crypto..."
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVcurrency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idEdtCurrency"
+        tools:listitem="@layout/currency_rv_item" />
+
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

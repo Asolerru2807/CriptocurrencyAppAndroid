@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (filteredlist.isEmpty()) {
-            Toast.makeText(this, "No currency found..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Criptomoneda no encontrada..", Toast.LENGTH_SHORT).show();
 
         } else {
             currencyRVAdapter.filterList(filteredlist);
@@ -124,14 +124,14 @@ public class MainActivity extends AppCompatActivity {
                     currencyRVAdapter.notifyDataSetChanged();
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(MainActivity.this, "Something went amiss. Please try again later", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Error, pruebe de nuevo...", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(MainActivity.this, "Something went amiss. Please try again later", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Error, pruebe de nuevo...", Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
